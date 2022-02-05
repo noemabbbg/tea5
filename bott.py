@@ -3,7 +3,7 @@ import logging
 import unittest
 import random
 import manhwaclass
-import aiogram_broadcaster
+
 from aiogram import Bot, types
 from aiogram.utils import executor
 from aiogram.utils.emoji import emojize
@@ -27,8 +27,6 @@ import dictant
 from dictant import Herokiller, Maindict
 import os
 from mysql.connector import MySQLConnection
-from aiogram_broadcaster import TextBroadcaster
-from aiogram_broadcaster import MessageBroadcaster
 from aiogram.dispatcher import FSMContext
 from db import Database, get
 from pyqiwip2p import QiwiP2P
@@ -49,27 +47,6 @@ def check_sub_channel(chat_member):
     else:
         return False
 
-
-#####блок рассылки#####
-async def subchanneldone(message: types.Message):
-    await bot.send_message('133886300', text="broadcast1337 sheesh")
-@dp.message_handler(commands=['sheesh'])
-async def subchanneldone(message: types.Message):
-    await bot.send_message('133886300', text=get.get_user())
-
-@dp.message_handler(commands=['broadcast1337'])
-async def broadcast_command_handler(msg: Message, state: FSMContext):
-   
-    await msg.answer('Введите текст для начала рассылки:')
-    await state.set_state('broadcast_text')
-async def start_broadcast(msg: Message, state: FSMContext):
-    await state.finish()
-    storage = state.storage 
-    users=get.get_user()
-    await MessageBroadcaster((users), msg).run()
-dp.register_message_handler(broadcast_command_handler, commands='broadcast1337')
-dp.register_message_handler(start_broadcast, state='broadcast_text', content_types=types.ContentTypes.ANY)
-#####блок рассылки#####
 
 #####блок баланса, пополнения#####
 @dp.message_handler(commands=['balance'])
