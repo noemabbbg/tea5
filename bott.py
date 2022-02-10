@@ -30,7 +30,7 @@ from mysql.connector import MySQLConnection
 from aiogram_broadcaster import TextBroadcaster
 from aiogram_broadcaster import MessageBroadcaster
 from aiogram.dispatcher import FSMContext
-from db import Database, get
+from db import Databasee, get
 from pyqiwip2p import QiwiP2P
 from pathlib import Path
 
