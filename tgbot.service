@@ -6,9 +6,9 @@ After=network.target
 User=code1
 Group=code1
 
-WorkingDirectory=/home/code1/tea4/
-Environment="PYTHONPATH=/home/code1/tea4/"
-ExecStart=/home/code1/tea4/new1venv/bin/python /home/code1/tea4/bott.py
+WorkingDirectory=/home/code1/tea5/
+Environment="PYTHONPATH=/home/code1/tea5/"
+ExecStart=/home/code1/tea5/new5venv/bin/python /home/code1/tea5/bott.py
 
 [Install]
 WantedBy=multi-user.target
