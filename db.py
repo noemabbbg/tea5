@@ -100,5 +100,5 @@ class get():  # сделаю буфферную k которая будет ов
             return(g)
     
     
-print(get.get_user(4))
+
 
