@@ -11,7 +11,7 @@ from dictant import SuicideBoy
 
 class Database():
     def __init__(self, db_file):
-        self.connection=sqlite3.connect('testdatabase.db')
+        self.connection=sqlite3.connect('testdatabase1.db')
         self.cursor=self.connection.cursor()
 
 
@@ -88,7 +88,7 @@ class Database():
 class get():  # сделаю буфферную k которая будет овтечать за то, какой столбец я беру - с айди или тех кто на что подписан  
     def get_user(k):
         
-            sqlite_connection = sqlite3.connect('testdatabase.db')
+            sqlite_connection = sqlite3.connect('testdatabase1.db')
             cursor = sqlite_connection.cursor()
 
             sqlite_select_query = """SELECT * from users"""
