@@ -34,7 +34,7 @@ from db import Database, get
 from pyqiwip2p import QiwiP2P
 from pathlib import Path
 
-db=Database('testdatabase.db')
+db=Database('testdatabase1.db')
 S=stateManhwa()
 storage=MemoryStorage()
 p2p=QiwiP2P(auth_key=QIWI_TOKEN)
