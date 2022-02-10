@@ -9,7 +9,7 @@ from dictant import SuicideBoy
 
 
 
-class Database():
+class Databasee():
     def __init__(self, db_file):
         self.connection=sqlite3.connect('testdatabase1.db')
         self.cursor=self.connection.cursor()
